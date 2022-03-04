@@ -73,7 +73,7 @@ function deleteTasks(deletedId) {
   //remove selected task form array in local storage
   todos.splice(deletedId, 1);
   localStorage.setItem("todo-list", JSON.stringify(todos));
-  showTodoTasks();
+  showTodoTasks('all');
 }
 
 //  update status to show on filters
