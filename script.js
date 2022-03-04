@@ -61,7 +61,7 @@ function showTodoTasks(filter) {
 }
 showTodoTasks("all");
 
-// Updating and editing task
+// edite tasks function 
 function editTasks(taskId, taskName) {
   editId = taskId;
   isEditedTask = true;
