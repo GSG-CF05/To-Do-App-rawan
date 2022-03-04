@@ -1,0 +1,130 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+/* global setting  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ :root{
+     --white : #fff;
+     --blue : #8ea1f0;
+     --icon-color : #888
+ }
+body{
+    background-color: #82c7eb;
+    overflow: hidden; 
+    font-family: 'Fredoka', sans-serif;
+}
+.wrapper{
+    margin: 135px auto;
+    width: 405px;
+    background-color: var(--white);
+    border-radius: 7px;
+    padding: 28px 0;
+
+}
+.task-input {
+    height: 52px;
+    padding : 0 25px;
+    position: relative;
+}
+.task-input i{
+    position: absolute;
+    top: 50%;
+    transform: translate(17px,-50%);
+    color: var(--icon-color);
+}
+.task-input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid #999;
+    padding: 0 20px 0 53px
+}
+.task-input input::placeholder{
+    color: #bfbfbf;
+}
+.task-input input:focus::placeholder{
+    opacity: 0;
+    transition: 0.3s
+}
+.controls,li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+.filters span{
+    font-size: 17px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+.filters span.active{
+    color: var(--blue);
+}
+
+.task-box{
+    margin: 20px 25px;
+}
+.task-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px ;
+    border-bottom: 1px solid #ccc;
+    text-transform: capitalize;
+}
+.task-box .task p.checked{
+    text-decoration: line-through;
+    background-color: var(--blue);
+    color: var(--white);
+}
+.task-box .task:last-child{
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.task label{
+    display: flex;
+}
+.task label input{
+    margin-top: 6px;
+    margin-right: 12px;
+
+}
+.task .setting i{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #222;
+}
+.task .setting i:hover{
+  color: var(--blue);
+}
+/* responsive queru  */
+
+@media (max-width: 991px){
+    .wrapper{
+        margin: 80px auto;
+        width: 350px;
+        padding: 20px 0;
+       
+    }
+    .filters span{
+        font-size: 18px;
+    }
+    .controls{
+        padding: 10px 10px;
+    }
+    .controls{
+    
+        justify-content: left;
+        align-items: center;
+    }
+  
+}
